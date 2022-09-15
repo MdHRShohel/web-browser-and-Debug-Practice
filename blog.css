@@ -1,0 +1,18 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url("./bg.png");
+    background-size: cover;
+    background-position: left top;
+    font-family: "Zilla Slab", serif;
+    color: white;
+  }
+  
+  .box-container {
+    width: 70%;
+    margin: 0 auto;
+  }
