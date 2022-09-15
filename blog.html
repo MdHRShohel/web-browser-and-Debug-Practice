@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Speed Monster</title>
+    <title>Blog Page</title>
     <link rel="stylesheet" href="blog.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,8 +14,138 @@
     />
   </head>
   <body>
-    <div class="box-container">
-      <h1>Welcome to my blog...</h1>
+    <header>
+      <h1 class="question title">Welcome to blog Page...</h1>
+    </header>
+    <main class="box-container">
+      <section>
+        <h1 class="question">Differences between local storage & session storage.</h1>
+        <div class="answer">
+          <div class="part">
+            <h2>Local storage</h2>
+            <ol>
+              <br>
+              <li>
+                localStorage persists the storage across browser sessions. So even
+                if the domain is opened in a new tab, or the browser is closed and
+                reopened, the storage is saved. There is no expiration.
+              </li>
+              <br>
+              <li>
+                You can access local Storage using the window object. myStorage =
+                window.localStorage;
+              </li>
+              <br>
+              <li>
+                The setItem() method takes a key name and a value as arguments. It
+                will then add the key/value pair to the Storage object. If the key
+                already exists, it will update the key’s value.
+                window.localStorage.setItem(keyName, keyValue);
+              </li>
+            </ol>
+          </div>
+          <div  class="part">
+            <h2>Session Storage</h2>
+            <ol>
+              <br>
+              <li>
+                sessionStorage is cleared when the page session ends. A page
+                session lasts as long as the tab or the browser is open.
+                Therefore, when you open a new tab or a new window, this creates a
+                new session and new storage.
+              </li>
+              <br>
+              <li>
+                You can access session Storage using the window object. myStorage
+                = window.sessionStorage;
+              </li>
+              <br>
+              <li>
+                The setItem() method takes a key name and a value as arguments. It
+                will then add the key/value pair to the Storage object. If the key
+                already exists, it will update the key’s value.
+                window.sessionStorage.setItem(keyName, keyValue);
+              </li>
+              <br>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1 class="question">Difference between Global scope and block scope</h1>
+        <div class="answer">
+        <div class="part">
+          <h2>Global Scope</h2>
+          <ol>
+            <br>
+            <li>
+              The variables defined outside of any function or curly brackets
+              are known as global variables and have global scope. Global scope
+              means that the variables can be accessed from any part of that
+              program, any function or conditional state can access that
+              variable.
+            </li>
+            <br>
+            <li>
+              For example: var name = "linuxHint"; function printName(){ // the
+              variable can be accessed inside here console.log("This tutorial is
+              by "+name); } printName();
+            </li>
+          </ol>
+        </div>
+        <div class="part">
+          <h2>Block Scope</h2>
+          <ol>
+            <br>
+            <li>
+              Block scope is also a sub-type of local scope. The block scope can
+              be defined as the scope of the variables inside the curly brackets
+              {}. Now, these curly brackets can be of loops, or conditional
+              statements, or something else. You are only allowed to refer to
+              these variables from within the curly brackets {}.
+            </li>
+            <br>
+            <li>
+              For example: A block of code enclosed with curly brackets{}
+              containing some block variables. { let a = 10; const b = 5; } This
+              block of code is itself inside a function. function addition() { {
+              let a = 10; const b = 5; } }
+            </li>
+          </ol>
+          <br>
+        </div>
+      </div>
+      </section>
+      <section>
+        <h1 class="question">How event loop work on javascript?</h1>
+        <p>
+          The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such an iteration is called a tick in the
+          Event Loop.
+        </p>
+        <br>
+      </section>
+
+      <section>
+        <h1 class="question">How can we get undefined in javascript?</h1>
+        <p>
+          Undefined is a primitive value in JavaScript. A variable or an object has an undefined value when no value is assigned before using it. So you can say that undefined means lack of value or unknown value.
+        </p>
+        <br>
+        <ol>
+          <li>Uninitialized variable</li>
+          <li>Accessing a non-existing property</li>
+          <li>Function parameters</li>
+          <li>Function return value</li>
+          <li>void operator</li>
+        </ol>
+      </section>
+      <br> <br>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <!--add all information -->
+        <h3>Thanks for visiting...</h3>
     </div>
+    </footer>
   </body>
 </html>
